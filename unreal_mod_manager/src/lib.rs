@@ -246,10 +246,7 @@ where
             Box::new(app)
         }),
     )
-    .unwrap_or_else(|_| {
-        error!("Failed to start gui");
-        panic!();
-    });
+    .expect("failed to launch gui");
 }
 
 pub const fn default_true() -> bool {
